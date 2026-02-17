@@ -47,23 +47,29 @@ const ProductDetailScreen = ({navigation}: any) => {
       />
 
       <View style={styles.dotContainer}>
-        {[0, 1, 2].map(index => (
-          <View
-            key={index}
-            style={[
-              styles.dot,
-              {
-                backgroundColor:
-                  activeDot === index ? COLORS.primary : COLORS.gray,
-              },
-            ]}
-          />
-        ))}
+        {(product?.images?.length ? product.images : [product?.thumbnail])?.map(
+          (_, index: number) => (
+            <View
+              key={index}
+              style={[
+                styles.dot,
+                {
+                  backgroundColor:
+                    activeDot === index ? COLORS.primary : COLORS.gray,
+                },
+              ]}
+            />
+          ),
+        )}
       </View>
 
       <View style={styles.bottomContainer}>
         <View style={styles.rowBetween}>
-          <View>
+          <View style={{
+           
+            justifyContent: 'center',
+          
+          }}>
             <Text style={styles.title} numberOfLines={1}>
               {product?.title || 'Product Name'}
             </Text>
@@ -122,7 +128,7 @@ const styles = StyleSheet.create({
 
   backButton: {
     position: 'absolute',
-    top: 50,
+    top: 30,
     left: 20,
     zIndex: 10,
   },
@@ -161,9 +167,9 @@ const styles = StyleSheet.create({
 
   rowBetween: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 20,
+    marginBottom: 10,
     gap: 20,
   },
 
@@ -193,7 +199,8 @@ const styles = StyleSheet.create({
   quantityRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 20,
+    alignSelf: 'flex-end',
+    marginVertical: 10,
     gap: 20,
   },
 
@@ -202,7 +209,7 @@ const styles = StyleSheet.create({
     height: 45,
     borderRadius: 8,
     borderWidth: 2,
-    borderColor: COLORS.gray,
+    borderColor: COLORS.black,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -228,9 +235,10 @@ const styles = StyleSheet.create({
 
   description: {
     ...FONTS.body3,
-    color: COLORS.black,
+    color: COLORS.gray,
     lineHeight: 22,
     fontWeight: '700',
+    textAlign: 'justify',
   },
 
   bottomRow: {

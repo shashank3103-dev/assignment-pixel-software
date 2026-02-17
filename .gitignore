@@ -140,4 +140,3 @@ vendor/bundle/
 # ------------------------------
 *.orig
 .eslintcache
-public_html/

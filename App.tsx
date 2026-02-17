@@ -7,13 +7,19 @@ import {NavigationContainer} from '@react-navigation/native';
 const linking = {
   prefixes: ['https://io.pixelsoftwares.com', 'http://io.pixelsoftwares.com'],
   config: {
+    initialRouteName: 'HomeTabs',
     screens: {
-      Home: '',
-      ProductDetail: 'product/:id',
-      DeepLinkTest: 'test.txt',
+      HomeTabs: {
+        screens: {
+          Home: '',
+          ProductDetail: 'product/:id',
+          DeepLinkTest: 'test.txt',
+        },
+      },
     },
   },
 };
+
 
 function App(): React.JSX.Element {
   LogBox.ignoreAllLogs();

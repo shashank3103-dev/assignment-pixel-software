@@ -6,7 +6,7 @@ import {
   ImageBackground,
   TouchableOpacity,
   SafeAreaView,
-  StatusBar,
+ 
 } from 'react-native';
 import {COLORS, ICONS} from '../../resources';
 import CustomButton from '../../components/CustomButton';
@@ -14,7 +14,7 @@ import CustomButton from '../../components/CustomButton';
 const FurnitureIntroScreen = ({navigation}: any) => {
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" />
+   
 
       <ImageBackground
         source={ICONS.BACKGROUND_IMAGE}

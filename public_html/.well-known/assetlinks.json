@@ -1,0 +1,10 @@
+{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.ecomapp",
+    "sha256_cert_fingerprints": [
+      "3B:05:ED:ED:39:EC:9C:CC:70:D6:39:80:82:A6:8F:66:84:77:DD:D1:4A:CB:7C:57:7D:19:51:37:7D:CA:98:26"
+    ]
+  }
+}

@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { COLORS } from '../resources'
 
-const ProfieNavigation = () => {
+const ProfileNavigation = () => {
   return (
     <View
         style={{
@@ -25,6 +25,6 @@ const ProfieNavigation = () => {
   )
 }
 
-export default ProfieNavigation
+export default ProfileNavigation
 
 const styles = StyleSheet.create({})
